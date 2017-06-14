@@ -19,11 +19,17 @@ public class LoginServlet extends HttpServlet {
                           HttpServletResponse response) throws ServletException, IOException {
 
         // read form fields
-        String username = request.getParameter("username");
+        String firstname = request.getParameter("firstname");
+        String surname = request.getParameter("surname");
+        String email = request.getParameter("email");
+        String schoolClass = request.getParameter("class");
         String password = request.getParameter("password");
 
-        System.out.println("username: " + username);
-        System.out.println("password: " + password);
+        System.out.println("Vorname: " + firstname);
+        System.out.println("Nachname: " + surname);
+        System.out.println("E-Mail: " + email);
+        System.out.println("Klasse: " + schoolClass);
+        System.out.println("Passwort: " + password);
 
         // do some processing here...
 
@@ -32,8 +38,11 @@ public class LoginServlet extends HttpServlet {
 
         // build HTML code
         String htmlRespone = "<html>";
-        htmlRespone += "<h2>Your username is: " + username + "<br/>";
-        htmlRespone += "Your password is: " + password + "</h2>";
+        htmlRespone += "<h3>Vorname: " + firstname + "<br/>";
+        htmlRespone += "Nachname: " + surname + "<br/>";
+        htmlRespone += "E-Mail: " + email + "<br/>";
+        htmlRespone += "Klasse: " + schoolClass + "<br/>";
+        htmlRespone += "Passwort: " + password + "</h3>";
         htmlRespone += "</html>";
 
         // return response
