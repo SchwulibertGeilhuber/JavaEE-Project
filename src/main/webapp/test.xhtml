@@ -1,0 +1,19 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="/WEB-INF/templates/default.xhtml">
+
+    <ui:define name="content">
+        <form method="get" action="j_security_check">
+            <h:panelGrid columns="2">
+                <h:outputLabel value="E-Mail:" />
+                <input type="text" name="username" />
+                <h:outputLabel value="Passwort:" />
+                <input type="password" name="password" />
+            </h:panelGrid>
+            <input type="submit" value="success" />
+
+        </form>
+    </ui:define>
+</ui:composition>
